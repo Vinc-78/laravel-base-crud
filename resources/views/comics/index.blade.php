@@ -1,4 +1,4 @@
-@extends('comics.layout')
+@extends('parts.layout')
 
 @section('title', "Home" )
     
