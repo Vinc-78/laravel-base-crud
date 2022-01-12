@@ -18,7 +18,7 @@
     </div>
     @endif
   
-    <form action="{{ route("comics.store") }}" method="post">
+    <form action=" {{ route("comics.store") }} " method="post">
       @csrf
   
       <div class="mb-3">
@@ -32,17 +32,7 @@
         @endif
       </div>
   
-      <div class="mb-3">
-        <label for="field_description" class="form-label">Email</label>
-        <input type="text" class="form-control {{ $errors->has("description") ? 'is-invalid' : '' }}" name="description" id="field_description">
-  
-        @if($errors->has("description"))
-        <div class="invalid-feedback">
-          {{ $errors->get("description")[0]}}
-        </div>
-        @endif
-      </div>
-  
+       
      
 
       <div class="mb-3">
@@ -79,7 +69,7 @@
       </div>
 
       <div class="mb-3">
-        <label for="field_type" class="form-label">Data di Pubblicazione</label>
+        <label for="field_type" class="form-label">Tipo</label>
         <input type="text" class="form-control {{ $errors->has("type") ? 'is-invalid' : '' }}" name="type"
           id="field_series">
         @if($errors->has("type"))
