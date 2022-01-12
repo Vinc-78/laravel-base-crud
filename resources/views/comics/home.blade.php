@@ -6,7 +6,7 @@
 
 <div class="container">
 
-    <h1>Lista utenti</h1>
+    <h1>Lista fumetti</h1>
   
     <a class="btn btn-link" href=" ">Aggiungi...</a>  {{-- {{ route('users.create') }} --}}
   
