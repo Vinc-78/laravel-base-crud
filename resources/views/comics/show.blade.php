@@ -18,6 +18,7 @@
     <img src="{{$comic->thumb}}" alt="">
     <h5>Descrizione: {{$comic->description}} </h5>
 
+    <a class="btn btn-link" href="{{ route('comics.edit', $comic->id) }} ">Modifica</a>
 
     <a href="{{ route('comics.index') }} ">Torna alla lista</a>
   
