@@ -27,7 +27,8 @@
   
       <div class="mb-3">
         <label for="field_title" class="form-label">Titolo</label>
-        <input type="text" class="form-control {{ $errors->has("title") ? 'is-invalid' : '' }}" name="title" id="field_title">
+        <input type="text" class="form-control {{ $errors->has("title") ? 'is-invalid' : '' }}" 
+        name="title" id="field_title" value="{{old("title")}}">
   
         @if($errors->has("title")) {{-- Se presente un errore si title --}}
 
@@ -44,7 +45,7 @@
       <div class="mb-3">
         <label for="field_price" class="form-label">Prezzo</label>
         <input type="text" class="form-control {{ $errors->has("price") ? 'is-invalid' : '' }}" name="price"
-          id="field_price">
+          id="field_price" value="{{old("price")}}">
         @if($errors->has("price"))
         <div class="invalid-feedback">
           {{ $errors->get("price")[0]}}
@@ -55,7 +56,7 @@
       <div class="mb-3">
         <label for="field_series" class="form-label">Serie</label>
         <input type="text" class="form-control {{ $errors->has("series") ? 'is-invalid' : '' }}" name="series"
-          id="field_series">
+          id="field_series" value="{{old("series")}}">
         @if($errors->has("series"))
         <div class="invalid-feedback">
           {{ $errors->get("series")[0]}}
@@ -66,7 +67,7 @@
       <div class="mb-3">
         <label for="field_sale_date" class="form-label">Data di Pubblicazione</label>
         <input type="text" class="form-control {{ $errors->has("sale_date") ? 'is-invalid' : '' }}" name="sale_date"
-          id="field_series">
+          id="field_series" value="{{old("sale_date")}}">
         @if($errors->has("sale_date"))
         <div class="invalid-feedback">
           {{ $errors->get("sale_date")[0]}}
@@ -77,7 +78,7 @@
       <div class="mb-3">
         <label for="field_type" class="form-label">Tipo</label>
         <input type="text" class="form-control {{ $errors->has("type") ? 'is-invalid' : '' }}" name="type"
-          id="field_series">
+          id="field_series" value="{{old("type")}}">
         @if($errors->has("type"))
         <div class="invalid-feedback">
           {{ $errors->get("type")[0]}}

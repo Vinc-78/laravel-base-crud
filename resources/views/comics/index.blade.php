@@ -19,6 +19,13 @@
         
       @endforeach
     </ul>
+
+    @if (session("msg")) {{-- se il caricamento avviene da il messaggio indicato con il with nel controller --}}
+
+      <div class="alert alert-success">{{session("msg")}}</div>
+
+  @endif
+  
   </div>
 
 
