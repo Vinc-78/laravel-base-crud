@@ -7,13 +7,17 @@
 <div class="container">
     <h1>Inserimento nuovo fumetto</h1>
   
-    @if($errors->any())
+    @if($errors->any())  {{-- Elenca tutti gli errori --}}
     <div class="alert alert-danger">
       Ci sono errori nel form:
       <ul>
+
         @foreach($errors->all() as $error)
-        <li>{{ $error }}</li>
+
+          <li>{{ $error }}</li>
+
         @endforeach
+
       </ul>
     </div>
     @endif
@@ -25,11 +29,13 @@
         <label for="field_title" class="form-label">Titolo</label>
         <input type="text" class="form-control {{ $errors->has("title") ? 'is-invalid' : '' }}" name="title" id="field_title">
   
-        @if($errors->has("title"))
+        @if($errors->has("title")) {{-- Se presente un errore si title --}}
+
         <div class="invalid-feedback">
-          {{ $errors->get("title")[0]}}
+          {{ $errors->get("title")[0]}}  {{-- Lo stampa --}}
         </div>
         @endif
+
       </div>
   
        

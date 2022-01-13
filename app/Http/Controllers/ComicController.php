@@ -53,9 +53,11 @@ class ComicController extends Controller
          
       
           $newComic->save();
-      
-          return redirect()->route("comics.show", $newComic->id); //per mostrare l'elemento appena inserito
-    }
+         /*  return redirect()->route("comics.show", ['$id'=>$newComic->id]); il secondo argomento si può semplificare*/
+         
+         return redirect()->route("comics.show", $newComic->id)->with("msg", "Elemento aggiunto");
+
+        }
 
     /**
      * Display the specified resource.
@@ -76,7 +78,7 @@ class ComicController extends Controller
      */
     public function edit($id)
     {
-        //
+        $comic = Comic::findOrFail($id);
     }
 
     /**
